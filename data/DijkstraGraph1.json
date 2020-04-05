@@ -1,0 +1,50 @@
+{
+	"S": {
+		"Label": "S",
+		"Distance": 1073741823,
+		"Edges": [
+			{
+				"From": "S",
+				"To": "V",
+				"Length": 1
+			},
+			{
+				"From": "S",
+				"To": "W",
+				"Length": 4
+			}
+		]
+	},
+	"V": {
+		"Label": "V",
+		"Distance": 1073741823,
+		"Edges": [
+			{
+				"From": "V",
+				"To": "T",
+				"Length": 6
+			},
+			{
+				"From": "V",
+				"To": "W",
+				"Length": 2
+			}
+		]
+	},
+	"W": {
+		"Label": "W",
+		"Distance": 1073741823,
+		"Edges": [
+			{
+				"From": "W",
+				"To": "T",
+				"Length": 3
+			}
+		]
+	},
+	"T": {
+		"Label": "T",
+		"Distance": 1073741823,
+		"Edges": []
+	}
+}
