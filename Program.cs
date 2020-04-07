@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
+using workspace.lib;
 
 namespace workspace
 {
@@ -10,9 +11,47 @@ namespace workspace
     {
         static void Main(string[] args)
         {
-			var graph = new Graph(File.ReadAllText("data/DijkstraGraph1.json"));
-			graph.Dijkstra("S");
-			graph.DistanceTable.ToList().ForEach(dt => Console.WriteLine((dt.Key, dt.Value.Item1, dt.Value.Item2)));
+            var queue = new PriorityQueue(6);
+            queue.AddNew(3);
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.AddNew(4);
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.AddNew(2);
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.AddNew(11);
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.AddNew(1);
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.AddNew(9);
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.GetMin();
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.GetMin();
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.GetMin();
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.GetMin();
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.GetMin();
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");
+            queue.GetMin();
+            queue.DisplayElements();
+            Console.WriteLine("----------------------");            
+
+            // var graph = new Graph(File.ReadAllText("data/DijkstraGraph1.json"));
+            // graph.Dijkstra("S");
+            // graph.DistanceTable.ToList().ForEach(dt => Console.WriteLine((dt.Key, dt.Value.Item1, dt.Value.Item2)));
         }
     }
 
